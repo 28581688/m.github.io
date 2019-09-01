@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="must-revalidate,no-cache"/>
+<meta http-equiv="refresh" content="300;"/>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=2.0″ user-scalable=no;"/>
+<meta name="mobileoptimized" content="240"/>
+<meta name="Iphone-content" content="320"/>
+<meta name="format-detection" content="telephone=no" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css/in.css" type="text/css">
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/touchslide.1.1.source.js"></script>
+<script type='text/javascript' src="{dede:global.cfg_templets_skin/}/js/superslide.js"></script>
+<base target="_blank">
+</head>
+<body>
+<img src="{dede:global.cfg_templets_skin/}/logo.jpg" style="visibility:hidden;height:0;width:0;" />
+
+<!--logo-->
+{dede:include filename="logo.htm"/}
+<!--logo-->
+<!--banner-->
+{dede:include filename="banner.htm"/}
+<!--banner-->
+
+<div class="wapcont">
+  <div class="news">
+    <div class="news_left fl"> <img src="{dede:global.cfg_templets_skin/}/images/index_22.jpg"></div>
+    <div class="news_right f1" id="foxnews">
+      <ul class="bd ziti">
+            {dede:arclist flag='' titlelen='40' row=1 typeid='4'}
+            <li >
+              <div>推荐</div>
+              <a href="[field:arcurl/]"  target="_blank">[field:title/]</a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist flag='' titlelen='40' row=1 typeid='1,5'}
+            <li class='lz'>
+              <div>热点</div>
+              <a href="[field:arcurl/]"  target="_blank">[field:title/]</a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist flag='' titlelen='40' row=1 typeid='2,3'}
+            <li >
+              <div>推荐</div>
+              <a href="[field:arcurl/]"  target="_blank">[field:title/]</a>
+            </li>
+            {/dede:arclist}
+            {dede:arclist flag='' titlelen='40' row=1 typeid='7'}
+            <li class='lz'>
+              <div>热点</div>
+              <a href="[field:arcurl/]"  target="_blank">[field:title/]</a>
+            </li>
+            {/dede:arclist}
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <script type="text/javascript">
+        jQuery("#foxnews").slide({mainCell:".bd",autoPage:true,effect:"topLoop",autoPlay:true,scroll:2,vis:2,interTime:5000});
+  </script>
+</div>
+
+<section class="autohei article">
+  <div class="article_list">
+     <h3 class="arc_h fl"><img src="{dede:global.cfg_templets_skin/}/images/home.png">{dede:field name='position'/} </h3>
+     <h3 class="arc_hr fr"><img src="{dede:global.cfg_templets_skin/}/images/wechat.png"><a href="/wx/">添加微信</a></h3>
+    <div class="news_con">
+      <ul>
+      {dede:list pagesize='15'}
+      <li><a href="[field:arcurl/]" target="_self">[field:title/]</a></li>
+      {/dede:list}
+      </ul>
+    </div>
+      
+    <div class="yy-tel"> <a href="tel:18093126338 ">
+      <p class="tel1">了解藜麦</p>
+      </a> <a href="/wx/">
+      <p class="tel2">在线咨询</p>
+      </a> 
+     </div>
+  </div>
+</section>
+
+<div class="content">
+  <div class="bank10"></div>
+  <div class="subnav">
+    <table class="d-t-jg" width="100%" style="background-color:#fff;">
+      <tbody>
+        <tr>
+              <td rowspan="2" class="b-n" style="background-color: #EA1859;width:24%;"><a href="/html/cpzs/" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/chanpin-a.jpg" width="100%"></a></td>
+              <td><a href="/html/cpzs/64.html">青海白藜</a></td>
+              <td><a href="/html/cpzs/65.html">青海三色</a></td>
+              <td><a href="/html/cpzs/66.html">青海黑藜</a></td>
+            </tr>
+            <tr>
+              <td><a href="/html/cpzs/68.html">雪藜六号</a></td>
+              <td><a href="/html/cpzs/67.html">甘肃白藜</a></td>
+              <td><a href="/html/cpzs/" target="_blank">更多&gt;&gt;</a></td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tit-1">精<span>挑</span>细<span>选</span>&#8194;粒粒饱满</div>
+   <div class="chanpinshow">
+      <div id="chanpin" class="banimg">
+        <div class="hd1">
+          <ul>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul>
+            <li><a href="/html/qhlm/"><img src="{dede:global.cfg_templets_skin/}/images/chanpin-1.jpg" /></a></li>
+            <li><a href="/html/gslm/"><img src="{dede:global.cfg_templets_skin/}/images/chanpin-2.jpg" /></a></li>
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+            TouchSlide({
+            slideCell:"#chanpin",
+            titCell:".hd1 ul",
+            mainCell:".bd ul",
+            effect:"leftLoop", 
+            autoPage:true,//自动分页
+            autoPlay:true,
+            interTime:4000//自动播放
+            });
+       </script> 
+   </div>
+  
+  <div class="wapper">
+    <div class="title-section" ><a href="/wx/?aid=54" target="_blank"><img src="{dede:global.cfg_templets_skin/}/images/go.png" alt="" class="title-section-icon"></a></div>
+    <div class="bank10"></div>
+    <div class="tips-loop">
+      <div class="tipsup" id="tipsup">
+        <div class="tits">
+          <ul>
+          </ul>
+        </div>
+        <div class="texs">
+          <p class="icon-notice"></p>
+          <ul class="infoList">
+            <li><a href="/wx/" target="_blank">【最新】1分钟前，上海的王小姐下单成功</a><span>[青海三色藜麦]</span></li>
+            <li><a href="/wx/" target="_blank">【最新】8分钟前，湖北的张**下单成功</a><span>[青海白藜麦]</span></li>
+            <li><a href="/wx/" target="_blank">【最新】18分前匿名用户下单成功</a><span>[雪藜六号]</span></li>
+            <li><a href="/wx/" target="_blank">30分钟前，山东王小姐下单成功</a><span>[青海白藜麦]</span></li>
+            <li><a href="/wx/" target="_blank">1小时，广东王**下单成功</a><span>[天祝藜麦]</span></li>
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+		TouchSlide({ 
+		slideCell:"tipsup",
+		titCell:".tits ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".texs ul", 
+		effect:"leftLoop", 
+		autoPage:true,//自动分页
+		autoPlay:true //自动播放
+		});
+	  </script> 
+    </div>
+  </div>
+  <div class="bank10"></div>
+  <div class="wapper">
+    <!--adword-->
+   {dede:include filename="adword.htm"/}
+    <!--adword-->
+  </div>
+  <div class="bank10"></div>
+  
+    <!--tags-->
+   {dede:include filename="tags.htm"/}
+    <!--tags-->
+  
+  <div class="bank10"></div>
+  <div class="wapper">
+    <div class="bank10"></div>
+    
+    <!--pinglun-->
+   {dede:include filename="pinglun.htm"/}
+    <!--pinglun-->
+    
+    <div class="bank10"></div>
+    <div class="news_con">
+        <div class="lmTit"><b>业内资讯</b><a href="/html/mtzx/" class="more">更多资讯</a></div>
+        <ul>
+          {dede:arclist flag='' titlelen=48 row=5 typeid='1,2,3,5'}
+          <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="bank10"></div>
+<!--pinpai-->
+{dede:include filename="pinpai.htm"/}
+<!--pinpai-->
+
+<!---footer-->
+{dede:include filename="footer.htm"/}
+<!---footer-->
+
+{dede:include filename="tj.htm"/}
+
+</body>
+</html>

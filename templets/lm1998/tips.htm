@@ -1,0 +1,42 @@
+<div class="livechat-girl animated"><a href="/wx/"> <img class="girl" src="{dede:global.cfg_templets_skin/}/images/en_3.png"></a>
+  <div class="livechat-hint rd-notice-tooltip rd-notice-type-success rd-notice-position-left single-line show_hint">
+    <a href="/wx/"><div class="rd-notice-content">嘿，你想买藜麦吗？加微信</div></a>
+  </div>
+  <div class="animated-circles">
+    <div class="circle c-1"></div>
+    <div class="circle c-2"></div>
+    <div class="circle c-3"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+(function($) {
+	setInterval(function(){
+		if($(".animated-circles").hasClass("animated")){
+			$(".animated-circles").removeClass("animated");
+		}else{
+			$(".animated-circles").addClass('animated');
+		}
+	},3000);
+	var wait = setInterval(function(){
+		$(".livechat-hint").removeClass("show_hint").addClass("hide_hint");
+		clearInterval(wait);
+	},4500);
+	$(".livechat-girl").hover(function(){
+		clearInterval(wait);
+		$(".livechat-hint").removeClass("hide_hint").addClass("show_hint");
+	},function(){
+		$(".livechat-hint").removeClass("show_hint").addClass("hide_hint");
+	}).click(function(){
+		if(isMobile){
+			 window.location.href = 'http://m.lm1998.cn/';
+		}else{
+			var oWidth = 606,
+				oHeight = 630,
+				top = ($(window).height()/2)-(oHeight/2),
+				left = ($(window).width()/2)-(oWidth/2);
+			window.open('http://m.lm1998.cn/','','width='+oWidth+',height='+oHeight+',scrollbars=yes,top='+top+',left='+left+',resizable=yes');
+		}
+	});
+})(jQuery);
+</script>

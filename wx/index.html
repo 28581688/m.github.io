@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="35; url=/?tiaozhuan"> 
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<title>添加藜麦销售的微信在线沟通</title>
+<style type="text/css">
+#LRdiv0, #LRdiv1, #LRdiv3, #LRfloater0, #LRfloater1 {
+	display: none !important;
+}
+</style>
+<style>
+@charset "utf-8";
+*{padding:0;margin:0;border:0;font-family:'Microsoft YaHei',Helvetica,Arial,sans-serif}
+blockquote,body,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,iframe,input,li,ol,p,pre,select,td,textarea,th,ul{font-weight:400;padding:0;margin:0;list-style:none}
+body{color: #000;background: #fff;min-width:320px;max-width:640px;margin:0 auto;font:1.2rem Microsoft Yahei;}
+fieldset,img{border:0}
+input{-webkit-appearance:none}
+em,i,ins{font-style:normal}
+li,ul{list-style:none}
+table{border-collapse:collapse;border-spacing:0}
+button,checkbox,form,input,radio,select,textarea{vertical-align:top;border:0;-webkit-appearance:none}
+select{padding:0 5px;font-family:'Microsoft YaHei';-webkit-appearance:none}
+img{max-width:100%;vertical-align:middle}
+a{color: #000;text-decoration:none;}
+a:link,a:visited{text-decoration:none}
+a:hover{text-decoration:none}
+html{font-size:12px;}
+.p01{font-weight:700;text-align:center;font-size:18px;padding:20px 0 0px;color:#333;margin-top:15px;}
+.p01 span{color:#e70a0a}
+.p02{text-align:center}
+.p07{text-align:center;padding-top: 6px;font-size: 18px;}
+.p02 img{width:60%}
+.p05{text-align:center;padding:10px 0}
+.p06{text-align:center}
+.p07{margin:0; color:#666;font-size:14px; padding:0 15px;}
+.p07 a{ color:#03F;}
+#wxinput{border:1px solid #ccc;text-align:center;line-height:40px;height:40px;font-size:24px;font-weight:700;color:#e70a0a;display: inline-block;padding: 0 10px;}
+.copybtn{background: #e7650a;color:#fff;width: 80%;height: 50px;border-radius:5px;font-size: 26px;letter-spacing: 2px;border: 1px solid #cb5400;}
+.gowx{background:#48a636;color:#fff;width: 80%;height: 50px;border-radius:5px;font-size: 24px;display:inline-block;line-height: 50px;margin: 20px 0;border: 1px solid #248411;}
+.back{background: #f6ea68;padding:5px 10px;border: 1px solid #e7d400;border-radius: 20px;position: fixed;left: 2px;top: 2px;font-size: 14px;font-weight: bold;}
+
+#sucss {padding: 0 0 30px 0;text-align: center;width:80%;position: fixed;left: 10%;top:20%;background: rgba(255,255,255,.97);border-radius: 15px;z-index: 5;display: none;}
+#zhedan {background: rgba(0,0,0,.8);width: 100%;height: 100%;position: fixed;top: 0;z-index: 2;display: none;}
+#closetc {position: absolute;width: 20px;height: 20px;right: -10px;top: -10px;}
+</style>
+<script src="js/clipboard.min.js"></script>
+</head>
+<body>
+<span class="back" id="wxback">&lt; 返回</span>
+<p class="p01">你的<span>藜麦客服</span><span>1对1</span>微信解答</p>
+<p class="p02"><img src="images/wx-liu.png"></p>
+<p class="p07">青海藜麦销售咨询<strong style="color:#e70a0a">微信号</strong></p>
+<p class="p05"><span id="wxinput" data-clipboard-text="870153329">870153329</span></p>
+<p class="p06">
+  <button class="copybtn" id="cbtn" data-clipboard-text="870153329">点击复制 <img src="images/hand.png"></button>
+</p>
+<p class="p06"><a href="tel:18093126338" class="gowx">直接电话咨询 <img src="images/jt01.png"></a></p>
+
+<p class="p07">若你已经在微信中请长按二维码识别添加好友，也可以去<a href="http://mp.weixin.qq.com/mp/homepage?__biz=MzU4ODc2Nzc2Mg==&hid=1&sn=76b7121b7ca6097d005f56d105d087d6&scene=18#wechat_redirect" ><<关注微信公众号>></a>，随时了解藜麦的常识：）</p>
+<div id="sucss">
+  <h2 style="font-size:24px;letter-spacing:2px;padding:10px 0;background:#dadada;border-radius:15px 15px 0 0;color:#208b0b;font-weight:bold;"><img src="images/okts.png" style="width:20px;vertical-align:-2px;"> 复制成功</h2>
+  <p style="margin:10px 0;text-align:center;"><!--<img src="images/jhy-liu.gif">--></p>
+  <a href="weixin://" style="background:#48a636;color:#fff;padding:0 10px;height:40px;border-radius:5px;font-size:20px;display:inline-block;line-height:40px;margin:10px 0;text-decoration:none;" id="gowxtext">点此进入微信 粘贴加好友</a> <span id="closetc"><img src="images/bottomtanchuangclose.png" style="width:20px;"></span></div>
+<div id="zhedan"></div>
+<script type="text/javascript">
+var urlbefore = document.referrer;
+var swturl=document.location.href;
+var po=swturl.indexOf('fromurl')+8;
+var urljq=swturl.substring(po);
+
+wxback.onclick=function(){
+	window.open('https://mp.weixin.qq.com/mp/homepage?__biz=MzU4ODc2Nzc2Mg==&hid=1&sn=76b7121b7ca6097d005f56d105d087d6&scene=18&uin=&key=&devicetype=Windows+7&version=62060739&lang=zh_CN&ascene=7&winzoom=1&e=wxhtmlback&p='+urljq+'&r='+urlbefore,'_self');
+}
+closetc.onclick=function(){
+	sucss.style.display='none';
+	zhedan.style.display='none';
+}
+
+window.onload=function(){
+	var clipboard = new ClipboardJS('.copybtn');
+	var gowxtext = document.getElementById("gowxtext");
+	var wxback = document.getElementById("wxback");
+	var cbtn = document.getElementById("cbtn");
+	var sucss = document.getElementById("sucss");
+	var zhedan = document.getElementById("zhedan");
+	var closetc = document.getElementById("closetc");
+	var agt=navigator.userAgent.toLowerCase();
+	var is_bdapp = (agt.indexOf('baiduboxapp')!=-1);
+	var is_ucapp = (agt.indexOf('ucbrowser')!=-1);
+
+	if(is_bdapp){
+		gowxtext.innerHTML='手动打开微信 粘贴加好友';
+		gowxtext.setAttribute('href','https://mp.weixin.qq.com/s/xCDJA0iuCOn3CgU-vHfQLg');
+	}else if(is_ucapp){
+		cbtn.onclick=function(){
+			sucss.style.display='block';
+			zhedan.style.display='block';
+		}
+	}
+	
+	clipboard.on('success', function(e) {
+		sucss.style.display='block';
+		zhedan.style.display='block';
+		e.clearSelection();
+	});
+}
+</script>
+
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0b4d50e9f29731eafc2b9068d6b6ddce";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</div>
+</body>
+</html>
