@@ -338,7 +338,7 @@ var TouchSlide = function(a){
 
 //new add
 document.writeln("<style>");
-document.writeln(".message-frame { position: fixed; line-height: 40px; width: 300px; margin: auto; bottom: 80px; left: 0; right: 0; background: #BBBBBB; text-align: center; border-radius: 20px; opacity: 0.8; display: none;font-size: 13px; }");
+document.writeln(".message-frame { position: fixed; z-index:99999999;line-height: 40px; width: 300px; margin: auto; bottom: 80px; left: 0; right: 0; background: #BBBBBB; text-align: center; border-radius: 20px; opacity: 0.8; display: none;font-size: 13px; }");
 document.writeln(".message-frame span { font-size: 13px; color: #000000; background: #BBBBBB; }");
 document.writeln("</style>");
 document.writeln("<script>");
